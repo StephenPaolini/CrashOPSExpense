@@ -166,7 +166,7 @@ def table(x):
 def filter(x):
     YTD_qr = df.query('year ==' + x)
     YTD_fr = YTD_qr['Price'].sum()
-    YTD_card = pn.indicators.Number(name='YTD Spending', value=YTD_fr, format='${,.2f}'.format(
+    YTD_card = pn.indicators.Number(name='YTD Spending', value=YTD_fr, format='${.2f}'.format(
         YTD_fr), font_size='34pt', title_size='20pt', default_color='white')
     return YTD_card
 
